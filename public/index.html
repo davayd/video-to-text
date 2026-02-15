@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video → Audio → Text</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <style>
+      html, body, #root { height: 100%; margin: 0; }
+      .split { display: grid; grid-template-rows: 180px 1fr; height: 100%; gap: 8px; padding: 8px; box-sizing: border-box; }
+      .mainSplit { display: grid; grid-template-columns: minmax(340px, 36%) 6px 1fr; height: calc(100% - 16px); }
+      .rightSplit { display: grid; grid-template-columns: minmax(300px, 1fr) 6px minmax(300px, 1fr); height: 100%; }
+      .resizer { background:#cfd8dc; cursor: col-resize; }
+      .resizer:hover { background:#90a4ae; }
+      .section { overflow: auto; }
+      video, audio { width: 100%; }
+      .activeRow { background: #e3f2fd; }
+      .textRow { border-bottom: 1px solid #eee; padding: 8px; cursor: pointer; }
+      .textRow textarea { width: 100%; min-height: 70px; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@mui/material@5/umd/material-ui.development.js"></script>
+    <script src="https://unpkg.com/@mui/icons-material@5/umd/material-ui-icons.min.js"></script>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
